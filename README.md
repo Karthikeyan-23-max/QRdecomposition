@@ -18,8 +18,19 @@ To implement QR decomposition algorithm using the Gram-Schmidt method.
     ![eqn4](./ex1.jpg)
 4.	Construct the upper triangular matrix R
     ![eqn5](./ex2.jpg)
+  	
+### **Algorithm: QR Decomposition via Gram-Schmidt**
 
-
+1. **Input** matrix $A$ and determine its shape $(n, m)$.
+2. **Initialize** matrices $Q$ and $u$ with empty arrays of shape $(n, n)$.
+3. **Set** the first column of $u$ to the first column of $A$.
+4. **Normalize** the first column of $u$ to get the first column of $Q$.
+5. **For** each column $i = 1$ to $n-1$:
+6. → Copy $A[:,i]$ to $u[:,i]$.
+7. → Subtract projections of $u[:,i]$ on all previous $Q[:,j]$ vectors.
+8. → Normalize $u[:,i]$ to get $Q[:,i]$.
+9. **Construct** matrix $R$ as an upper triangular matrix using dot products of $Q$ and $A$.
+10. **Display** matrices $Q$ and $R$ as the final QR decomposition.
 
 ## Program:
 ### Gram-Schmidt Method
